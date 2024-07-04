@@ -93,21 +93,26 @@ label {
 }
 
 button {
+    justify-content: center;
+    align-items: center;
     display: inline-flex;
-    background-color: #EB455F;
+    background-color: #405c81;
     color: #FCFFE7;
     font-family: "Gugi", sans-serif;
     font-size: 15px;
     padding: 6px 10px;
     margin: 4px 40px 30px 20px;
     border: 0;
-    border-radius: 5px;
+    border-radius: 15px;
+    width: 100px; 
+    height: 50px;
+    text-align: center;
   }
 
 button:hover {
     cursor: pointer;
-    background-color: #FCFFE7;
-    color: #EB455F;
+    background-color: #ffffff;
+    color: #1411e6;
 }
 
 ul {
@@ -179,34 +184,23 @@ footer {
 }
 select {
     font-family: "Gugi", sans-serif;
+    font-size: 16px; 
+    padding: 10px; 
+    font-size: 12px; 
+    border-radius: 5px; 
+    border: 2px solid #52a5dd;
+    
     
 }
 .filtros select {
     line-height: 1.5; /* Esto aumenta la altura de la línea */
-    height: 20px;
+    height: 30px;
     padding: 1px;
     font-size: 12px;
     box-shadow: 0 4px 8px #68b0e0;
     text-align: center;
     justify-content: center;
 }
-
-/* .info-button {
-    background-color: #ffffff; 
-    border: 1px solid #1b485d; 
-    color: #1b485d; 
-    padding: 5px 10px; 
-    font-size: 12px; 
-    cursor: pointer; 
-    box-shadow: 0 4px 8px #68b0e0;
-    transition: background-color 0.3s ease, color 0.3s ease; 
-    border-radius: 5px; 
-} */
-
-/* .info-button:hover {
-    background-color: #1b485d;
-    color: #ffffff;
-} */
 
 @media screen and (max-width: 1024px) {
     .SecondContainer {
@@ -322,3 +316,7 @@ select {
   .sizing {
     font-size: 10px;
   }
+  .star {
+    margin-left: 20px; 
+  }
+  

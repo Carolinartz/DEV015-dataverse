@@ -13,7 +13,7 @@ export const renderItems = (data) => {
       <h4 itemprop="containsSeason">${item.facts.streamingPlatform}</h4>
       <p itemprop="description">${item.shortDescription}</p>
       <p itemprop="year"><span class="sizing">Transmisión: </span>${item.facts.yearOfRelease} - ${item.facts.yearOfEnd}</p>
-      <p itemprop="rating"><span class="sizing">Rating: </span>${item.facts.averageRating} /10<span>&#11088;</span></p>`;
+      <p itemprop="rating"><span class="sizing">Rating: </span>${item.facts.averageRating} /10<span class="star">&#11088;</span></p>`;
 
     liElement.classList.add('item-style');
 
