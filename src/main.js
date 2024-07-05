@@ -1,4 +1,4 @@
-import { filterData, sortData } from './dataFunctions.js';
+import { filterData, sortData, computeStats } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 
@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const platformSelect = document.querySelector('#platform');
   const sortBySelect = document.querySelector('#sortBy');
   const buttonReset = document.querySelector('#buttonClear');
+  const buttonStats = document.querySelector('#buttonStats');
+
+
+  const originalData = [...data];
+
 
   //función para renderizar datos filtrados y ordenados
   const renderFilteredData = () => {
@@ -36,11 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
   
   //Botón para limpiar datos seleccionados
   buttonReset.addEventListener('click', () => {
-    platformSelect.selectedIndex = 0;
-    sortBySelect.selectedIndex = 0;
-    rootElement.innerHTML = ''
-    rootElement.append(renderItems(data));
+    sortBySelect.selectedIndex = 0; 
+    platformSelect.selectedIndex = 0;  
+    rootElement.innerHTML = '';       
+    rootElement.append(renderItems(originalData)); 
   });
+  
+  //Botón para mostrar estadísticas
+  buttonStats.addEventListener('click', () => {
+    const stats = computeStats(data);
+      
+    const resultsContainer = document.querySelector('#results');
+    resultsContainer.innerHTML = `
+        <h4><span class="highlight">${stats.avgYears.toFixed(2)} años</span> promedia una transmisión.</h4>
+         `;
+  });  
 
-  rootElement.appendChild(renderItems(data)); //Render inicial
+  rootElement.appendChild(renderItems(data)); 
 });
