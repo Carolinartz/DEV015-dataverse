@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttonReset = document.querySelector('#buttonClear');
   const buttonStats = document.querySelector('#buttonStats');
 
+
   const originalData = [...data];
 
 
