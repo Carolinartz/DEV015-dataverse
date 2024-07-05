@@ -49,7 +49,11 @@ Con este prototipo comenzamos:
 ![prototipo](src/assets/prototipo.png)
 
 Y el diseño finalmente resultó en esto:
- * _(aquí poner captura cuando tengamos revisado todo)_
+
+ * Versión desktop ![pc](/src/assets/pc.png)
+ * Versión tablet ![tablet](/src/assets/tablet.png)
+ * Versión mobile ![mobile](/src/assets/mobile.png)
+
 
 ## 4. Problemas detectados en tests de usabilidad
 
